@@ -1,0 +1,111 @@
+body {
+  background-color:#121212;
+}
+
+.expenses-container {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .new-expense {
+    background-color: #0a8829;
+    color: #000;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #333;
+  }
+  
+  .expense-row {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #444;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .details input {
+    margin-right: 10px;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  
+  .Paid {
+    background-color: #7a4ef0;
+  }
+  
+  .Yet-to-pay {
+    background-color: #b92759;
+  }
+
+.exp{
+  background-color:#121212;
+  height: 100;
+}  
+
+.expense-form {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #218838;
+  border-radius: 5px;
+  background:#121212;
+}
+
+.expense-form div {
+  margin-bottom: 10px;
+}
+
+.expense-form label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.expense-form input {
+  padding: 5px;
+  width: 100%;
+  max-width: 300px;
+  background-color:cornsilk;
+}
+
+.new-expense {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.new-expense:hover {
+  background-color: #218838;
+}

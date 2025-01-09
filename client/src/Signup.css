@@ -1,0 +1,21 @@
+.login{
+    background-color:rgba(0, 0, 0, 0.57) !important;
+    width: 50vw;
+    margin: 20px;
+    padding: 100px;
+    /* opacity: 0.7; */
+}
+
+.mainLgn{
+    width:900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:rgb(246, 246, 246);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.562);
+    opacity: 0.9;
+}

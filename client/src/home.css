@@ -1,0 +1,162 @@
+.home-container {
+    background-image: url("https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?t=st=1734759815~exp=1734763415~hmac=d8d2a14a10f5614569e2f6b6365ebb549a19887a38ea0769d03b42e4c15d82ff&w=1060"); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+    /* height: 100vh;  */
+    color: white;
+  }
+  
+  .content {
+    text-align: center;
+    padding-top: 20vh;
+    font-size: 2rem;
+  }
+.nv{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(135deg, #0d0b1a, #000000); */
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: transparent;
+}
+
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.header .buttons a {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-login {
+  background: none;
+  border: 2px solid #ffffff;
+}
+
+.btn-signup {
+  background: linear-gradient(90deg, #ff00f7, #c200ff);
+  border: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+}
+
+.hero .buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-download {
+  /* background-color: cadetblue; */
+  border: 2px solid rgb(147, 67, 83);
+  color: azure;
+}
+
+.btn-contact {
+  background: transparent;
+  border: 2px solid #ffffff;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+
+.features div {
+  text-align: center;
+  width: 350px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+  height: 220px;
+}
+
+.features h3 {
+  margin-bottom: 15px;
+  color: #08979e;
+}
+
+@media (max-width: 768px) {
+  .header {
+      padding: 10px 20px;
+  }
+
+  .header nav {
+      margin-bottom: 10px;
+  }
+
+  .hero {
+      padding: 50px 20px;
+  }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+
+  .features {
+      flex-direction: column;
+      padding: 20px;
+      width: 50vw;
+  }
+
+  .features div {
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 1.5rem;
+  }
+
+  .hero p {
+      font-size: 0.8rem;
+  }
+
+  .hero .buttons a {
+      padding: 10px 20px;
+  }
+}
+

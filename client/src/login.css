@@ -1,0 +1,31 @@
+.lgn{
+    background-image: url("https://img.freepik.com/free-vector/abstract-digital-grid-vector-black-background_53876-111550.jpg?t=st=1734695721~exp=1734699321~hmac=d9c95d18d94ea3f2995f3584f680871bf2f7d150fc41501b6a0bcc8f213f360d&w=900"); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+    height: 100vh;
+    color: white;
+   
+}
+
+.mainLgn{
+    width:900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:rgb(246, 246, 246);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.581);
+    
+    
+
+    
+}
+
+.inside{
+    background-color: rgba(0, 0, 0, 0.659);
+    
+}
