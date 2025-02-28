@@ -1,0 +1,51 @@
+name: Build and Analyze
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Analyze MERN App
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout code
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  
+
+      # Set up Node.js (adjust version as needed)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Install dependencies (for both frontend and backend)
+      - name: Install dependencies
+        run: |
+          cd backend && npm install
+          cd ../frontend && npm install
+
+      # Run tests (optional, but recommended before SonarQube analysis)
+      - name: Run Tests
+        run: |
+          cd backend && npm test || true
+          cd ../frontend && npm test || true
+
+      # Install SonarQube Scanner globally
+      - name: Install SonarQube Scanner
+        run: npm install -g sonarqube-scanner
+
+      # Run SonarQube analysis
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          args: >
+            -Dsonar.projectKey=your_project_key
+            -Dsonar.sources=backend,frontend
+            -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/build/**
