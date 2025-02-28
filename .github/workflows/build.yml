@@ -28,15 +28,11 @@ jobs:
           cd backend && npm install
           cd ../frontend && npm install
 
-      # Run tests (optional, but recommended before SonarQube analysis)
+      # Run tests (optional, but recommended)
       - name: Run Tests
         run: |
-          cd backend && npm test || true
-          cd ../frontend && npm test || true
-
-      # Install SonarQube Scanner globally
-      - name: Install SonarQube Scanner
-        run: npm install -g sonarqube-scanner
+          cd backend && npm test
+          cd ../frontend && npm test
 
       # Run SonarQube analysis
       - name: SonarQube Scan
@@ -46,6 +42,7 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >
-            -Dsonar.projectKey=your_project_key
+            -Dsonar.projectKey=my-mern-app
+            -Dsonar.organization=my-org  # Remove this if not using SonarCloud
             -Dsonar.sources=backend,frontend
             -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/build/**
